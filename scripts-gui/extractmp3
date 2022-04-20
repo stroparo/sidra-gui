@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if ! which avconv >/dev/null ; then
+    exit 1
+fi
+
 extractmp3 () {
     # Info:  Extracts argument file's audio to {argument}.mp3 via avconv utility.
 
